@@ -15,7 +15,7 @@ find_package(geometry_msgs REQUIRED)
 find_package(autoware_planning_msgs REQUIRED)
 find_package(autoware_perception_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
-find_package(tier4_planning_msgs REQUIRED)
+find_package(autoware_internal_planning_msgs REQUIRED)
 
 
 rosidl_generate_interfaces(${PROJECT_NAME}
@@ -27,7 +27,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Ego.msg"
   "msg/EgoStatus.msg"
   "msg/Behavior.msg"
-  DEPENDENCIES std_msgs geometry_msgs nav_msgs sensor_msgs autoware_planning_msgs autoware_perception_msgs tier4_planning_msgs
+  DEPENDENCIES std_msgs geometry_msgs nav_msgs sensor_msgs autoware_planning_msgs autoware_perception_msgs autoware_internal_planning_msgs
 )
 
 
