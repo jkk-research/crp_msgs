@@ -6,3 +6,4 @@ geometry_msgs/PoseWithCovariance stop_pose
 uint8 lane_edge_type_left
 uint8 lane_edge_type_right
 float32 maximum_speed
+uint32[] applicable_map_feature_ids

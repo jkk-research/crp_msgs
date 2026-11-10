@@ -12,6 +12,7 @@ find_package(std_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(unique_identifier_msgs REQUIRED)
 find_package(autoware_planning_msgs REQUIRED)
 find_package(autoware_perception_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
@@ -24,10 +25,16 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/World.msg"
   "msg/TargetSpace.msg"
   "msg/Scenario.msg"
+  "msg/ScenarioVisualization.msg"
+  "msg/EgoVisualization.msg"
+  "msg/PedestrianCrossing.msg"
+  "msg/MapFeatures.msg"
   "msg/Ego.msg"
+  "msg/PowertrainTelemetry.msg"
+  "msg/ActuatorState.msg"
   "msg/EgoStatus.msg"
   "msg/Behavior.msg"
-  DEPENDENCIES std_msgs geometry_msgs nav_msgs sensor_msgs autoware_planning_msgs autoware_perception_msgs tier4_planning_msgs
+  DEPENDENCIES std_msgs geometry_msgs nav_msgs sensor_msgs unique_identifier_msgs autoware_planning_msgs autoware_perception_msgs tier4_planning_msgs
 )
 
 
